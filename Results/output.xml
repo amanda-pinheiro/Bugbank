@@ -1,0 +1,1114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-07-24T19:02:06.043964" rpa="false" schemaversion="5">
+<suite id="s1" name="Transfer" source="C:\Users\Amanda\Desktop\Automation Practice\suites\transfer">
+<suite id="s1-s1" name="Transfer Test1" source="C:\Users\Amanda\Desktop\Automation Practice\suites\transfer\transfer_test1.robot">
+<test id="s1-s1-t1" name="TC03 - Transferindo valor pelo site Bugbank com sucesso" line="8">
+<kw name="Criar dois registros válidos" owner="setup_teardown" type="SETUP">
+<kw name="Dado que eu acesso o Bugbank" owner="setup_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:06.745057" level="INFO">Opening browser 'chrome' to base url 'https://bugbank.netlify.app/'.</msg>
+<arg>${standart.URL}</arg>
+<arg>${standart.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-24T19:02:06.742052" elapsed="7.694336"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-24T19:02:14.437389" elapsed="4.410069"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:06.740054" elapsed="12.107404"/>
+</kw>
+<kw name="Quando realizo o primeiro cadastro" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:18.851456" elapsed="0.047971"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:18.901427" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[2]'.</msg>
+<arg>${home.register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:18.899427" elapsed="0.140913"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_email}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.041338" elapsed="0.079951"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:19.125291" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.122310" elapsed="0.286888"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:19.412198" level="INFO">Typing text 'frodo@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<arg>${sign_up.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.410197" elapsed="0.261840"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_name}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.673035" elapsed="0.047972"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:19.722004" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.721007" elapsed="0.105933"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:19.829561" level="INFO">Typing text 'Frodo Baggins' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<arg>${sign_up.name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.826940" elapsed="0.163901"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:19.991837" elapsed="0.037977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.033824" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.030817" elapsed="0.112930"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.146746" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.143747" elapsed="0.140913"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.284660" elapsed="0.035978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.323670" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.321670" elapsed="0.083637"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.407306" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.405307" elapsed="0.122925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.account_balance_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.528232" elapsed="0.033978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.563210" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label'.</msg>
+<arg>${home.account_balance_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.562210" elapsed="0.082948"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.645158" elapsed="0.031980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:20.678137" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/button'.</msg>
+<arg>${home.confirm_register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.678137" elapsed="0.120663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirmation_popup}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:20.799796" elapsed="0.313904"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:21.115699" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<arg>${home.close_confirmation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:21.114702" elapsed="0.131916"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:18.848458" elapsed="2.398160"/>
+</kw>
+<kw name="E faço o primeiro login" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.email_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:21.247617" elapsed="0.047972"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:21.296586" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:21.295589" elapsed="0.520052"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:21.817639" level="INFO">Typing text 'frodo@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<arg>${sign_up.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:21.815641" elapsed="0.173894"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.password_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:21.990533" elapsed="0.030978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:22.022512" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.021511" elapsed="0.099941"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:22.122450" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.121452" elapsed="0.121925"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.login_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.243377" elapsed="0.031980"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:22.278356" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<arg>${home.login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.276356" elapsed="0.085948"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:21.247617" elapsed="1.114687"/>
+</kw>
+<kw name="E entro na primeira conta" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${setup.msg_account}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.363307" elapsed="0.253038"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:22.362304" elapsed="0.255040"/>
+</kw>
+<kw name="Então abro outra guia acessando o Bugbank" owner="setup_page">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:22.620343" level="INFO">Executing JavaScript:
+window.open('https://bugbank.netlify.app/', '_blank');
+Without any arguments.</msg>
+<arg>window.open('${standart.URL}', '_blank');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.618342" elapsed="0.234291"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:22.853634" elapsed="0.290073"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:22.617344" elapsed="0.526363"/>
+</kw>
+<kw name="E realizo o segundo cadastro" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:23.144706" elapsed="0.508835"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:23.655542" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[2]'.</msg>
+<arg>${home.register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:23.654542" elapsed="0.104936"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_email}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:23.759478" elapsed="0.054968"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:23.816441" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:23.814446" elapsed="0.299812"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:24.116255" level="INFO">Typing text 'samwise@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<arg>${second_valid_user.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.114258" elapsed="0.280878"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_name}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.396123" elapsed="0.066495"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:24.463618" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.462618" elapsed="0.132919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:24.598535" level="INFO">Typing text 'Samwise Gamgee' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<arg>${second_valid_user.name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.596536" elapsed="0.187334"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.784867" elapsed="0.026979"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:24.813844" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.812845" elapsed="0.100938"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:24.915782" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:24.913783" elapsed="0.180888"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.094671" elapsed="0.029983"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:25.126656" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.124654" elapsed="0.106456"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:25.235113" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.232105" elapsed="0.178892"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.account_balance_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.411996" elapsed="0.035979"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:25.448972" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label'.</msg>
+<arg>${home.account_balance_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.447975" elapsed="0.070955"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.518930" elapsed="0.022986"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:25.543915" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/button'.</msg>
+<arg>${home.confirm_register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.542913" elapsed="0.100937"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirmation_popup}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.643850" elapsed="0.296551"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:25.942394" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<arg>${home.close_confirmation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:25.940401" elapsed="0.116923"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:23.143707" elapsed="2.914615"/>
+</kw>
+<kw name="E faço o segundo login" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.email_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:26.058322" elapsed="0.047490"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:26.107811" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:26.106811" elapsed="0.569237"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:26.678047" level="INFO">Typing text 'samwise@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<arg>${second_valid_user.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:26.677049" elapsed="0.216865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.password_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:26.894913" elapsed="0.033978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:26.930910" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:26.929891" elapsed="0.086805"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:27.019695" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.016696" elapsed="0.149422"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.login_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.166118" elapsed="0.030982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:27.198099" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<arg>${home.login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.197100" elapsed="0.083949"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:26.058322" elapsed="1.222727"/>
+</kw>
+<kw name="E entro na segunda conta" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${setup.msg_account}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.282046" elapsed="0.376459"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:27.281049" elapsed="0.377456"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:06.740054" elapsed="20.918451"/>
+</kw>
+<kw name="Dado que eu entre na página de transferência" owner="transfer1_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.button_transferpage}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.660503" elapsed="0.065958"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:27.727461" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div[2]/div[1]'.</msg>
+<arg>${transfer.button_transferpage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.726461" elapsed="0.083953"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${transfer.URL_transferpage}</arg>
+<arg>20</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.811418" elapsed="0.064951"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:27.659505" elapsed="0.217863"/>
+</kw>
+<kw name="Quando preencho os dados da conta válida a receber o valor" owner="transfer1_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_accountnumber}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.879368" elapsed="0.053965"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:27.934331" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[1]/div[1]/input'.</msg>
+<arg>${transfer.input_accountnumber}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:27.933333" elapsed="0.077953"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-24T19:02:43.012341" level="INFO">Slept 15 seconds.</msg>
+<arg>15</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-24T19:02:28.012285" elapsed="15.000056"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_accountdigit}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:43.012341" elapsed="0.035983"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:43.049333" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[1]/div[2]/input'.</msg>
+<arg>${transfer.input_accountdigit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:43.048324" elapsed="0.075957"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-24T19:02:58.127135" level="INFO">Slept 15 seconds.</msg>
+<arg>15</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-24T19:02:43.126280" elapsed="15.000855"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_transfervalue}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.127135" elapsed="0.037972"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:58.166105" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[2]/input'.</msg>
+<arg>${transfer.input_transfervalue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.165107" elapsed="0.056964"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:58.225070" level="INFO">Typing text '100' into text field '//*[@id="__next"]/div/div[3]/form/div[2]/input'.</msg>
+<arg>${transfer.input_transfervalue}</arg>
+<arg>${operations_data.transfer_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.223070" elapsed="0.136351"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_description}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.360419" elapsed="0.036977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:58.399394" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[3]/input'.</msg>
+<arg>${transfer.input_description}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.397396" elapsed="0.090808"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:58.490202" level="INFO">Typing text 'The Shire Credit Card' into text field '//*[@id="__next"]/div/div[3]/form/div[3]/input'.</msg>
+<arg>${transfer.input_description}</arg>
+<arg>${operations_data.description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.488204" elapsed="0.157905"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:27.878384" elapsed="30.767725"/>
+</kw>
+<kw name="E seleciono transferir" owner="transfer1_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.button_confirmtransfer}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.648106" elapsed="0.057964"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:02:58.708070" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/button'.</msg>
+<arg>${transfer.button_confirmtransfer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.707069" elapsed="0.121924"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:58.647109" elapsed="0.181884"/>
+</kw>
+<kw name="Então recebo a confirmação de transferência" owner="transfer1_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.popup_confirmedtransfer}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:02:58.832991" elapsed="0.352296"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:58.832991" elapsed="0.352296"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-24T19:02:59.202787" elapsed="3.047142"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:59.201789" elapsed="3.049138"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:02:06.739055" elapsed="55.512871"/>
+</test>
+<status status="PASS" start="2024-07-24T19:02:06.128908" elapsed="56.127011"/>
+</suite>
+<suite id="s1-s2" name="Transfer Test2" source="C:\Users\Amanda\Desktop\Automation Practice\suites\transfer\transfer_test2.robot">
+<test id="s1-s2-t1" name="TC04 - Transferindo valor pelo site Bugbank sem sucesso" line="8">
+<kw name="Criar dois registros válidos" owner="setup_teardown" type="SETUP">
+<kw name="Dado que eu acesso o Bugbank" owner="setup_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:02.318558" level="INFO">Opening browser 'chrome' to base url 'https://bugbank.netlify.app/'.</msg>
+<arg>${standart.URL}</arg>
+<arg>${standart.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-24T19:03:02.316561" elapsed="11.624134"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-24T19:03:13.941693" elapsed="0.035979"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:02.316561" elapsed="11.661111"/>
+</kw>
+<kw name="Quando realizo o primeiro cadastro" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:13.979670" elapsed="0.169898"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:14.154566" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[2]'.</msg>
+<arg>${home.register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:14.151563" elapsed="0.146438"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_email}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:14.298001" elapsed="0.057969"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:14.357962" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:14.356964" elapsed="0.310809"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:14.670770" level="INFO">Typing text 'frodo@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<arg>${sign_up.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:14.668775" elapsed="0.351764"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_name}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.021539" elapsed="0.064960"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.091508" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.086499" elapsed="0.125922"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.215418" level="INFO">Typing text 'Frodo Baggins' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<arg>${sign_up.name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.213420" elapsed="0.165898"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.380317" elapsed="0.031978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.413295" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.412295" elapsed="0.084578"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.500852" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.497854" elapsed="0.135921"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.634771" elapsed="0.034978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.671748" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.669749" elapsed="0.092942"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.765687" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.763691" elapsed="0.139912"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.account_balance_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.903603" elapsed="0.035976"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:15.940578" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label'.</msg>
+<arg>${home.account_balance_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:15.939579" elapsed="0.082732"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.023311" elapsed="0.038491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:16.063800" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/button'.</msg>
+<arg>${home.confirm_register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.062803" elapsed="0.116776"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirmation_popup}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.179579" elapsed="0.292320"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:16.474897" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<arg>${home.close_confirmation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.472923" elapsed="0.129896"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:13.978671" elapsed="2.625148"/>
+</kw>
+<kw name="E faço o primeiro login" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.email_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.604815" elapsed="0.039586"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:16.646401" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:16.645403" elapsed="0.582335"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:17.230736" level="INFO">Typing text 'frodo@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<arg>${sign_up.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.227738" elapsed="0.194542"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.password_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.423280" elapsed="0.036974"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:17.462255" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.461255" elapsed="0.093940"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:17.559196" level="INFO">Typing text '123456' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<arg>${sign_up.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.556208" elapsed="0.132906"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.login_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.690113" elapsed="0.032978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:17.724090" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<arg>${home.login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.723091" elapsed="0.077953"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:16.603819" elapsed="1.197225"/>
+</kw>
+<kw name="E entro na primeira conta" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${setup.msg_account}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:17.803047" elapsed="0.261346"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:17.801044" elapsed="0.263349"/>
+</kw>
+<kw name="Então abro outra guia acessando o Bugbank" owner="setup_page">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:18.066390" level="INFO">Executing JavaScript:
+window.open('https://bugbank.netlify.app/', '_blank');
+Without any arguments.</msg>
+<arg>window.open('${standart.URL}', '_blank');</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-07-24T19:03:18.065391" elapsed="0.067959"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:18.133350" elapsed="0.052967"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:18.064393" elapsed="0.121924"/>
+</kw>
+<kw name="E realizo o segundo cadastro" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:18.188317" elapsed="0.706445"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:18.896760" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[2]'.</msg>
+<arg>${home.register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:18.895763" elapsed="0.094944"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_email}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:18.991703" elapsed="0.061959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:19.055664" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:19.053662" elapsed="0.327925"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:19.384582" level="INFO">Typing text 'samwise@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[2]/input'.</msg>
+<arg>${home.input_email}</arg>
+<arg>${second_valid_user.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:19.382584" elapsed="0.273832"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_name}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:19.657416" elapsed="0.053966"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:19.714382" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:19.712381" elapsed="0.097941"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:19.814322" level="INFO">Typing text 'Samwise Gamgee' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[3]/input'.</msg>
+<arg>${home.input_name}</arg>
+<arg>${second_valid_user.name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:19.811320" elapsed="0.193880"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.input_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.006200" elapsed="0.038976"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:20.046174" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.045176" elapsed="0.112932"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:20.161104" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[4]/div/input'.</msg>
+<arg>${home.input_password}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.158108" elapsed="0.521107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_password}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.679215" elapsed="0.070955"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:20.752170" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.750170" elapsed="0.063257"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:20.816425" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[5]/div/input'.</msg>
+<arg>${home.confirm_password}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.813427" elapsed="0.141914"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.account_balance_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.955341" elapsed="0.024982"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:20.981323" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/div[6]/label'.</msg>
+<arg>${home.account_balance_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:20.980323" elapsed="0.068959"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirm_register_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.049282" elapsed="0.033978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:21.085259" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[2]/form/button'.</msg>
+<arg>${home.confirm_register_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.084262" elapsed="0.091944"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.confirmation_popup}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.177203" elapsed="0.291815"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:21.470016" level="INFO">Clicking element '//*[@id="btnCloseModal"]'.</msg>
+<arg>${home.close_confirmation_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.469018" elapsed="0.113928"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:18.187316" elapsed="3.396634"/>
+</kw>
+<kw name="E faço o segundo login" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.email_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.585946" elapsed="0.035977"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:21.624919" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:21.621923" elapsed="0.621107"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:22.247029" level="INFO">Typing text 'samwise@gmail.com' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[1]/input'.</msg>
+<arg>${home.email_login}</arg>
+<arg>${second_valid_user.email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.244030" elapsed="0.194879"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.password_login}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.438909" elapsed="0.027983"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:22.468892" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.467892" elapsed="0.074632"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:22.546524" level="INFO">Typing text 'bestcharacter' into text field '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[2]/div/input'.</msg>
+<arg>${home.password_login}</arg>
+<arg>${second_valid_user.password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.542524" elapsed="0.145911"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home.login_button}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.688435" elapsed="0.030981"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:22.721413" level="INFO">Clicking element '//*[@id="__next"]/div/div[2]/div/div[1]/form/div[3]/button[1]'.</msg>
+<arg>${home.login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.719416" elapsed="0.082947"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:21.584945" elapsed="1.217418"/>
+</kw>
+<kw name="E entro na segunda conta" owner="setup_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${setup.msg_account}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:22.803361" elapsed="0.329350"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:22.802363" elapsed="0.330348"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:02.313575" elapsed="20.819136"/>
+</kw>
+<kw name="Dado que eu entre na página de transferências" owner="transfer2_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.button_transferpage}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.135707" elapsed="0.059963"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.196668" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div[2]/div[1]'.</msg>
+<arg>${transfer.button_transferpage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.195670" elapsed="0.061962"/>
+</kw>
+<kw name="Wait Until Location Is" owner="SeleniumLibrary">
+<arg>${transfer.URL_transferpage}</arg>
+<arg>20</arg>
+<doc>Waits until the current URL is ``expected``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.257632" elapsed="0.216472"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:23.134709" elapsed="0.339395"/>
+</kw>
+<kw name="Quando preencho os dados de conta inválida a receber o valor" owner="transfer2_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_accountnumber}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.475103" elapsed="0.043973"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.521076" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[1]/div[1]/input'.</msg>
+<arg>${transfer.input_accountnumber}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.520077" elapsed="0.075951"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.599026" level="INFO">Typing text '123' into text field '//*[@id="__next"]/div/div[3]/form/div[1]/div[1]/input'.</msg>
+<arg>${transfer.input_accountnumber}</arg>
+<arg>${operations_error_data.account_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.597028" elapsed="0.117928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_accountdigit}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.714956" elapsed="0.031978"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.746934" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[1]/div[2]/input'.</msg>
+<arg>${transfer.input_accountdigit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.746934" elapsed="0.091946"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.840877" level="INFO">Typing text '4' into text field '//*[@id="__next"]/div/div[3]/form/div[1]/div[2]/input'.</msg>
+<arg>${transfer.input_accountdigit}</arg>
+<arg>${operations_error_data.account_digit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.838880" elapsed="0.107864"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_transfervalue}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.946744" elapsed="0.030981"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:23.978724" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[2]/input'.</msg>
+<arg>${transfer.input_transfervalue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:23.978724" elapsed="0.081957"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:24.063680" level="INFO">Typing text '100' into text field '//*[@id="__next"]/div/div[3]/form/div[2]/input'.</msg>
+<arg>${transfer.input_transfervalue}</arg>
+<arg>${operations_error_data.transfer_value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.060681" elapsed="0.123926"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.input_description}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.185604" elapsed="0.038491"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:24.225095" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/div[3]/input'.</msg>
+<arg>${transfer.input_description}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.225095" elapsed="0.080950"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:24.310046" level="INFO">Typing text 'The Shire Credit Card' into text field '//*[@id="__next"]/div/div[3]/form/div[3]/input'.</msg>
+<arg>${transfer.input_description}</arg>
+<arg>${operations_error_data.description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.307053" elapsed="0.187876"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:23.475103" elapsed="1.019826"/>
+</kw>
+<kw name="E selecione transferir" owner="transfer2_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer.button_confirmtransfer}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.496926" elapsed="0.033981"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-24T19:03:24.532904" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/form/button'.</msg>
+<arg>${transfer.button_confirmtransfer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.531907" elapsed="0.094940"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:24.495926" elapsed="0.130921"/>
+</kw>
+<kw name="Então recebo a mensagem de erro na operação de transferência" owner="transfer2_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${transfer_error.popup_failed_transfer}</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.628848" elapsed="0.271840"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:24.627846" elapsed="0.272842"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-24T19:03:24.902688" elapsed="2.675549"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:24.901687" elapsed="2.676550"/>
+</kw>
+<status status="PASS" start="2024-07-24T19:03:02.306566" elapsed="25.272678"/>
+</test>
+<status status="PASS" start="2024-07-24T19:03:02.260595" elapsed="25.321649"/>
+</suite>
+<status status="PASS" start="2024-07-24T19:02:06.046961" elapsed="81.538798"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Transfer">Transfer</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Transfer Test1">Transfer.Transfer Test1</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Transfer Test2">Transfer.Transfer Test2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

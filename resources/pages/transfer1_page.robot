@@ -20,12 +20,10 @@ Dado que eu entre na página de transferência
 Quando preencho os dados da conta válida a receber o valor
     Wait Until Element is Visible    ${transfer.input_accountnumber}                   20
     Click Element                    ${transfer.input_accountnumber}
-    Sleep                                                                              15
-    #Input Text                       ${transfer.input_accountnumber}                  ${operations_data.account_number}
+    Input Text                       ${transfer.input_accountnumber}                   ${operations_data.account_number}
     Wait Until Element is Visible    ${transfer.input_accountdigit}                    20
     Click Element                    ${transfer.input_accountdigit}
-    Sleep                                                                              15
-    #Input Text                       ${transfer.input_accountdigit}                    ${operations_data.account_digit}
+    Input Text                       ${transfer.input_accountdigit}                    ${operations_data.account_digit}
     Wait Until Element is Visible    ${transfer.input_transfervalue}                   20
     Click Element                    ${transfer.input_transfervalue}
     Input Text                       ${transfer.input_transfervalue}                   ${operations_data.transfer_value}
